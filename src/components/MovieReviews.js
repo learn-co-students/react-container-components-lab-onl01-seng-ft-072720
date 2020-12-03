@@ -4,15 +4,15 @@ import MovieReview from './MovieReview'
 
 const MovieReviews = props => {
 
-    // debugger
     return (
-        <div>
+        <ul>
             welcome to movie reviews component
-            {props.movies.map(movie => {
-                return <MovieReview movieData={movie}/>
+            {props.reviews.map((review, index) => {
+                return <li key={index}>
+                    <MovieReview reviewData={review}/>
+                    </li>
             })}
-        </div>
-        // debugger;
+        </ul>
         
     )
 }

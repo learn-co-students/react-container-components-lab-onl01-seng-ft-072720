@@ -11,7 +11,7 @@ export default class LatestMovieReviewsContainer extends Component {
         super(props);
 
         this.state = {
-            movies: []
+            reviews: []
         }
     }
 
@@ -24,18 +24,16 @@ export default class LatestMovieReviewsContainer extends Component {
         .then(resp => resp.json())
         .then(movieData => {
             this.setState({
-                movies: movieData.results
+                reviews: movieData.results
             })
-            console.log(this.state.movies)
         })
 
     }
 
     render () {
         return (
-            <div>
-                <MovieReviews movies={this.state.movies} />
-                movies list would go here
+            <div className="latest-movie-reviews">
+                <MovieReviews reviews={this.state.reviews} />
             </div>
         )
     }

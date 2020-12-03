@@ -4,7 +4,7 @@ const MovieReview = props => {
     return (
         <div>
             <h1>
-                {props.movieData.display_title}
+                {props.reviewData.display_title}
             </h1>
         </div>
     )
