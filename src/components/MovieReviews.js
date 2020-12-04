@@ -6,9 +6,8 @@ const MovieReviews = props => {
 
     return (
         <ul className="review-list">
-            welcome to movie reviews component
             {props.reviews.map((review, index) => {
-                return <li key={index}>
+                return <li key={index} className="review">
                     <MovieReview reviewData={review}/>
                     </li>
             })}
